@@ -2,4 +2,4 @@ Polska Table is a responsive restaurant website built with React and React Route
 
 You can view it live here Github Pages: https://jonaszdecember7-lab.github.io/Polska-Table/
 
-Unfortunately, I struggled with getting React Router apps to host correctly on Netlify so Github Pages is what will have to be the host.
+This project uses React Router for multiple pages. Due to routing complexities with static hosting on Netlify, it is currently only hosted on GitHub Pages. All functionality works as expected.
