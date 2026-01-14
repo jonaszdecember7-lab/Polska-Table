@@ -12,22 +12,25 @@ import NotFound from './components/NotFound.jsx'
 import './App.css'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 
-const router = createBrowserRouter(createRoutesFromElements(
-  <Route path='/' element={<Root />}>
-    <Route index element={<Home />} />
-    <Route path="menu" element={<Menu />}>
-      <Route index element={<FeaturedMenu />} />
-      <Route path="starters" element={<Starters />} />
-      <Route path="mains" element={<Mains />} />
-      <Route path="drinks" element={<Drinks />} />
-      <Route path="desserts" element={<Desserts />} />
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<Root />}>
+      <Route index element={<Home />} />
+      <Route path="menu" element={<Menu />}>
+        <Route index element={<FeaturedMenu />} />
+        <Route path="starters" element={<Starters />} />
+        <Route path="mains" element={<Mains />} />
+        <Route path="drinks" element={<Drinks />} />
+        <Route path="desserts" element={<Desserts />} />
 
+      </Route>
+      <Route path='contact' element={<Contact />} />
+      <Route path='about-us' element={<AboutUs />} />
+      <Route path="*" element={<NotFound />} />
     </Route>
-    <Route path='contact' element={<Contact />} />
-    <Route path='about-us' element={<AboutUs />} />
-    <Route path="*" element={<NotFound />} />
-  </Route>
-))
+  ),
+  { basename: '/Polska-Table' }
+)
 
 
 function App() {
