@@ -2,11 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" src="image/png" href="/Polska-Table/logo.png" />
+    <!-- Dynamically set <base> so asset URLs resolve correctly for both Netlify (root) and GitHub Pages (subpath) -->
+    <script>
+      (function(){
+        try {
+          var p = window.location.pathname;
+          var base = p.startsWith('/Polska-Table') ? '/Polska-Table/' : '/';
+          var b = document.createElement('base');
+          b.setAttribute('href', base);
+          document.head.appendChild(b);
+        } catch(e) { /* ignore */ }
+      })();
+    </script>
+    <link rel="icon" src="image/png" href="./logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Polska Table</title>
-    <script type="module" crossorigin src="/Polska-Table/assets/index-C19fxEQY.js"></script>
-    <link rel="stylesheet" crossorigin href="/Polska-Table/assets/index-cpnkfwmS.css">
+    <script type="module" crossorigin src="./assets/index-Q55ZzCmB.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-TSATdc3W.css">
   </head>
   <body>
     <div id="root"></div>
